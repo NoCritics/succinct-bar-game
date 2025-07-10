@@ -1,0 +1,149 @@
+/* Retro Wooden Bar Aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2a1810;
+    background-image: 
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            rgba(0,0,0,.1) 2px,
+            rgba(0,0,0,.1) 4px
+        ),
+        radial-gradient(ellipse at center, #3a2820 0%, #1a0f08 100%);
+    color: #f4e4c1;
+    font-family: 'Press Start 2P', monospace;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #d4af37;
+    text-shadow: 3px 3px 0px #8b6914, 6px 6px 10px rgba(0,0,0,0.8);
+    margin-bottom: 30px;
+    font-size: 36px;
+    letter-spacing: 3px;
+}
+
+.game-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#gameCanvas {
+    border: 8px solid #8b6914;
+    border-radius: 4px;
+    box-shadow: 
+        inset 0 0 20px rgba(0,0,0,0.5),
+        0 0 30px rgba(0,0,0,0.8);
+    background-color: #f5deb3;
+}
+
+.info-panel {
+    background-color: #3e2723;
+    border: 4px solid #8b6914;
+    border-radius: 4px;
+    padding: 20px;
+    min-width: 200px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+.score-display, .level-display {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #2a1810;
+    border: 2px solid #8b6914;
+    border-radius: 4px;
+}
+
+.score-display h2, .level-display h2 {
+    font-size: 14px;
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+#score, #level {
+    font-size: 24px;
+    color: #ffeb3b;
+    text-shadow: 2px 2px 0px #8b6914;
+}
+
+.controls {
+    background-color: #2a1810;
+    border: 2px solid #8b6914;
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 10px;
+    line-height: 20px;
+}
+
+.controls h3 {
+    color: #d4af37;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+.controls p {
+    margin-bottom: 8px;
+    color: #f4e4c1;
+}
+
+.key {
+    display: inline-block;
+    background-color: #5d4e37;
+    border: 2px solid #8b6914;
+    border-radius: 3px;
+    padding: 2px 6px;
+    margin: 0 2px;
+    box-shadow: 0 2px 0 #3e2723;
+}
+
+.status-bar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3e2723;
+    border: 2px solid #8b6914;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #ffeb3b;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Game states */
+.game-over {
+    animation: shake 0.5s;
+}
+
+.level-complete {
+    animation: pulse 1s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cold Beer - Classic Arcade Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>ICE COLD BEER</h1>
+        <div class="game-wrapper">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            <div class="info-panel">
+                <div class="score-display">
+                    <h2>SCORE</h2>
+                    <div id="score">0</div>
+                </div>
+                <div class="level-display">
+                    <h2>LEVEL</h2>
+                    <div id="level">1</div>
+                </div>
+                <div class="controls">
+                    <h3>CONTROLS</h3>
+                    <p><span class="key">Q</span>/<span class="key">A</span> - Left Side</p>
+                    <p><span class="key">P</span>/<span class="key">L</span> - Right Side</p>
+                    <p><span class="key">SPACE</span> - Start/Restart</p>
+                </div>
+            </div>
+        </div>
+        <div class="status-bar" id="statusBar">Press SPACE to start</div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
